@@ -9,7 +9,7 @@ const exphbs  = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const fileupload = require('express-fileupload')
-const app= express()
+const app = express()
 const port = 3000
 const hostname = '127.0.0.1'
 
