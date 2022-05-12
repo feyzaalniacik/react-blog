@@ -10,10 +10,12 @@ import {
   Switch,
   Route,
   Link
-} from "react-router-dom"
+} from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const user = true; // değiştirilince url'ye göre aşağıdaki ssayfalar açılır.
+  const {user} = useContext(Context); // değiştirilince url'ye göre aşağıdaki ssayfalar açılır.
   return (
     <Router>
       <TopBar />

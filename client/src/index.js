@@ -1,21 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom";
 import App from './App';
+import { ContextProvider } from "./context/Context";
 
-const express = require('express')
-const path= require('path')
-const exphbs  = require('express-handlebars');
- // const { engine }  = require('express-handlebars');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser')
-const fileupload = require('express-fileupload')
-const app = express()
-const port = 3000
-const hostname = '127.0.0.1'
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>,
+  document.getElementById("root")
 );
